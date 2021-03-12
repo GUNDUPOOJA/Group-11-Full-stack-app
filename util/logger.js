@@ -24,6 +24,8 @@
 
 const winston = require('winston');
 
+
+
 /**
  * A custom Winston logger that can write to
  * files and the console concurrently (and colorfully)
@@ -49,6 +51,7 @@ const logger = winston.createLogger({
     new winston.transports.File({
       filename: 'errors.log',
       level: 'error',
+      logging:false,
     }),
   ],
 });
